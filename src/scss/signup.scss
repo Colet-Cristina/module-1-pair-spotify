@@ -1,0 +1,190 @@
+@use "./core/variables" as vars;
+
+.signup {
+  max-width: 450px; // Ancho similar al de la imagen
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &-logo {
+    width: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+  }
+
+  // Botones de Facebook y Google
+  &-social {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    .btn-facebook,
+    .btn-google {
+      padding: 0.8rem;
+      border-radius: 500px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #535353;
+    }
+
+    .btn-facebook {
+      background-color: #405a93;
+      color: white;
+      border: none;
+    }
+
+    .btn-google {
+      background-color: white;
+      color: #535353;
+    }
+  }
+}
+
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #d9dadc;
+  }
+
+  span {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &-input {
+    padding: 0.8rem;
+    border: 1px solid #878787;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  &-birth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr; // Día, Mes (más ancho), Año
+    gap: 1rem;
+  }
+
+  &-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-gender-options {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+
+    label {
+      font-weight: 400;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  &-check {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+
+    input[type="checkbox"] {
+      margin-top: 0.2rem;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.btn-submit {
+  background-color: #1ed760;
+  color: black;
+  padding: 1rem 3rem;
+  border-radius: 500px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+.btn-reset {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #6a6a6a;
+  font-size: 0.8rem;
+  margin: 0 auto 20px auto;
+  cursor: pointer;
+}
+.signup-login {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  color: #000000;
+
+  a {
+    color: #1ed760;
+    text-decoration: underline;
+    font-weight: 700;
+
+    &:hover {
+      color: #1fdf64;
+    }
+  }
+}

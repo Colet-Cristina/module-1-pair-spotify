@@ -1,0 +1,17 @@
+@use "./variables" as vars;
+
+// Configuración de caja y limpieza de espacios
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: vars.$font-main;
+  font-optical-sizing: auto; //ajusta el espacio de la fuente segun el tamaño
+}
+
+// Imágenes responsivas
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

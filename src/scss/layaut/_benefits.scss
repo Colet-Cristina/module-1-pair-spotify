@@ -1,0 +1,68 @@
+@use "../core/variables" as vars;
+
+.section_white {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 3rem 1.25rem;
+}
+
+.section_white_title {
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.benefit_img {
+  width: 5rem;
+  height: auto;
+  margin-right: 1.5rem;
+}
+
+.benefit_title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.benefit_text {
+  font-size: 1rem;
+}
+
+// ==========================================
+// BENEFITS DESKTOP
+// ==========================================
+@media (min-width: 480px) {
+  .benefits_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 2. Cuatro columnas iguales
+    flex-wrap: wrap; //  Si no caben los 4, que bajen
+    gap: 2rem; // Espacio entre columnas y filas
+    align-items: start;
+    max-width: 70rem;
+    margin: 4rem auto;
+  }
+
+  .benefit {
+    flex-direction: column; // Coloca el icono arriba y el tex abajo
+    text-align: center; // Texto centrado
+    padding-right: 0; // Para quitar el padding del móvil
+    margin-bottom: 0;
+  }
+
+  .benefit_img {
+    margin-right: 0;
+    margin-bottom: 1.25rem; // Espacio entre img y tex
+    width: 8.75rem; // Más grandes
+  }
+}

@@ -1,0 +1,66 @@
+@use "../core/variables" as vars;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; // Alinea todo a la base
+  background-color: vars.$color-black;
+  color: vars.$color-texFooter-gray;
+  padding: 3rem 1.5rem;
+  font-size: 0.75rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.legal-links {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.625rem;
+}
+
+.country-select {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flag {
+  width: 1.25rem;
+}
+
+// Estilo para los enlaces
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// ==========================================
+//  FOOTER DESKTOP
+// ==========================================
+@media (min-width: 480px) {
+  .footer {
+    padding: 3rem 10%;
+    flex-direction: row; // Links a la izquierda, copyright a la derecha
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    flex-direction: row; // Los links en fila
+    gap: 2rem;
+  }
+
+  .footer-right {
+    align-items: flex-end;
+  }
+}

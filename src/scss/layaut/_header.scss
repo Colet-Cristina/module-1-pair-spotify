@@ -1,0 +1,68 @@
+@use "../core/variables" as vars;
+
+.header_black {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0.75rem 1rem;
+  background-color: vars.$color-black;
+  position: sticky;
+  top: 0;
+}
+
+.logo-spotify {
+  display: inline;
+  height: 2rem;
+  justify-content: flex-end;
+}
+
+.menu-spotify {
+  display: inline;
+  width: 1.5rem;
+  height: auto;
+  justify-content: right;
+}
+// Que no se vea la lista en el movil
+.nav-links {
+  display: none;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+// ==========================================
+// DESKTOP
+// ==========================================
+@media (min-width: 480px) {
+  .header_black {
+    padding: 1rem 10%; // Más espacio a los lados
+  }
+
+  .menu-spotify {
+    display: none; // Quita menú hamburguesa
+  }
+
+  // Mostrar texto enlaces
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .separator {
+    color: white;
+  }
+
+  // Ajuste del header para que logo y menú se separen
+  .header_black {
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
